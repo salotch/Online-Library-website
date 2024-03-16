@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select book and edit</title>
+    <meta
+            name =  "description"
+            content = "select book and edit its details"/>
+</head>
+<body>
+<form method="post">
+    <div>
+        <h3>Edit the book details</h3>
+        <label for="bid">Enter Book ID</label>
+        <input type="number" id="bid" value="bid" required min="0" >
+        <br>
+        <br>
+        <label for="bn">Enter Book Name</label>
+        <input type="text" id="bn" value="" required minlength="3" >
+        <br>
+        <br>
+        <label for="ba">Enter Book Author</label>
+        <input type="text" id="ba" value="" required minlength="3" >
+        <br>
+        <br>
+        <label for="bc">Enter Book Category</label>
+        <select name="book category" id="bc" required>
+            <option value="c" >Adventure</option>
+            <option value="c">Romance</option>
+            <option value="c">Fantasia</option>
+            <option value="c">Horror</option>
+            <option value="c">Historical Fiction</option>
+        </select>
+        <br>
+        <br>
+        <label for="bd">Enter Book Description</label>
+        <textarea name="bookdecription" id="bd" cols="30" rows="5" required></textarea>
+        <br>
+        <br>
+        <input type="submit" name="" value="Submit">
+        <input type="reset" name="" value="Reset">
+    </div>
+</form>
+</body>
+</html>
