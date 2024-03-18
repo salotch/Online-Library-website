@@ -8,6 +8,13 @@
             content = "Add New Book"/>
 </head>
 <body>
+<nav class="admin-nav">
+    <a href="add%20new%20book.html"><span class="nav-item">Add New Book</span></a>|
+    <a href="view%20list.html"><span class="nav-item">Available Books</span></a>|
+    <a href="select%20book%20and%20edit%20its%20details.html"><span class="nav-item">Edit a Book</span></a>|
+    <a href="Delete%20book.html"><span class="nav-item">Delete a Book</span></a>|
+
+</nav>
 <form method="post">
     <div>
         <h3>Enter the book details</h3>
@@ -34,8 +41,10 @@
         </select>
         <br>
         <br>
-        <label for="bd">Enter Book Description</label>
-        <textarea name="book_description" id="bd" cols="30" rows="5" required></textarea>
+        <div>
+            <label for="bd">Enter Book Description</label>
+            <textarea name="book_description" id="bd" cols="30" rows="5" required></textarea>
+        </div>
         <br>
         <br>
         <input type="submit" name="" value="Submit">
