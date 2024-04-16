@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Sign_Up</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Sign up</h1>
+        <br>
+    <form action="login.html" method="post" target="_blank">
+            <div>
+            <label>Username: </label>
+            <input type="text" required placeholder="username" >
+            </div>
+            <br>
+            <div>
+                <label>Password: </label>
+                <input type="password" required placeholder="Password" required minlength="4" maxlength="15">
+            </div>
+            <br>
+            <div>
+                <label>Confirm password: </label>
+                <input type="password" required placeholder="Password" required minlength="4" maxlength="15">
+            </div>
+            <br>
+            <div>
+                <label>Email: </label>
+                <input type="email" required placeholder="like @gmail.com" required >
+            </div>
+            <br>
+        <label for="as">Sign up as :</label>
+        <div id="as">
+            <input type="radio"  id="_admin" name="-as" >
+            <label for="_admin">Admin</label><br>
+            <input type="radio" id="_user" name="-as">
+            <label for="_user">User</label><br>
+        </div>
+        <br>
+        <input type="submit" value="Signup">
+    </form>
+    </body>
+</html>
