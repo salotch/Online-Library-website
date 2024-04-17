@@ -1,27 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Login</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="login.css" />
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     <title>LOGIN</title>
 </head>
+
+
+
 <body>
-<form action="pre%20sign%20up.html" method="POST">
-    <div>
-        <label>Username or email</label>
-        <input type="text" required placeholder="Username or email" name="user">
-    </div>
-    <br>
-    <div>
-        <label>Password</label>
-        <input type="password" required placeholder="write a complex pass." name="Pass" minlength="10"
-               maxlength="20">
-    </div>
-    <br>
-    <div>
-        <button type="login" class="btn">login</button>
-    </div>
-    <br>
-</form>
+
+    <form action="pre%20sign%20up.html" method="POST">
+
+        <h2>LOGIN</h2>
+        <div >
+           <div><label >Username or email</label></div> 
+            
+            <input type="text" required placeholder="Username or email" name="user">
+            <i class='bx bxs-user'></i>
+        </div>
+
+        <div>
+            <label>Password</label>
+            <input type="password" required placeholder="Password" name="Pass" minlength="10"
+                maxlength="20">
+            <i class='bx bxs-lock-alt'></i>
+        </div>
+        <br>
+           <div>
+             <a href="#">Forget password?</a>
+        </div>
+        <br>
+         <!-- <div class="RUA">
+              
+             <input id="use" type="radio" name="us" value="user">
+             <label for="use">User</label>
+             <input id="use" type="radio" name="Ad" value="admin">
+             <label for="use">Admin</label>
+            </div>-->
+        <div>
+            <button type="login" class="btn">LOGIN</button>
+        </div>
+        <div>
+            <p>Don't have an account?
+                <a href="#" class="register-link">Register</a>
+            </p>
+        </div>
+    </form>
 
 </body>
+
 </html>
