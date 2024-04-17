@@ -1,0 +1,117 @@
+
+* {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border:none;
+    border-radius: 30px;;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('8c3ab7aa8fd3c95df0d6243ba6424c53.jpg');
+}
+
+form {
+    background-color: rgba(255, 240, 228, 0.5);
+    padding: 50px;
+    width: 500px;
+
+}
+
+h2 {
+    text-align: center;
+    color: #4e342e;
+    margin-bottom: 20px;
+    padding: 10px;
+    width:50%;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #d2b48c, #f0eae1);
+}
+
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 3px solid #b08d6c;
+    border-radius: 50px;
+    background-color: #ede0cf;
+    font-size: 16px;
+    color: black;
+    transition: border-color 0.3s ease;
+}
+
+
+input[type="text"]:focus,
+input[type="text"]:hover,
+input[type="password"]:focus,
+input[type="password"]:hover {
+    outline: none;
+    border-color: #4e342e;
+     
+}
+
+input[type="text"]::placeholder,input[type="password"]::placeholder{
+    color:#4e342e
+}
+
+label{
+    color:#4e342e;
+    border-radius: 10px;
+    background-image: linear-gradient(to right,#d2b48c,#ede0cf,white);
+    margin: 5px;
+    padding:5px;
+    display:flex;
+    justify-content: space-around;
+    width:40%;
+    border-color: #f4dec1;
+}
+
+a {
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+}
+
+a:hover {
+    color: #4e342e;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+p{
+    color:black;
+}
+
+i {
+    color:#6d4c41;
+    position: absolute;
+    transform: translateX(-150%) translateY(70%);
+}
+button {
+    padding: 10px 15px; 
+    background-color: #6d4c41;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+    right:-345px;
+    transition: background-color 0.5s ease;
+}
+
+button:hover {
+    background-color: #d2b48c;
+    color:#4e342e;
+}
+
+
