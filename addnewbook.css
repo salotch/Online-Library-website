@@ -4,7 +4,58 @@
     margin: 0;
     padding: 0;
     border:none;
-    border-radius: 30px;
+    text-align: center;
+}
+#_book thead{
+    font-weight: bold;
+}
+label{
+    background-color: rgba(255, 240, 228, 0.5);
+    /*border-radius: 30px ;*/
+    color: #4e342e;
+    font-weight: bold;
+    font-size: 25px;
+    width: auto;
+    height: auto;
+}
+form:hover,#_book:hover {
+    box-shadow: 0 0 5px 5px rgba(78, 52, 46, 1);
+}
+#_book ,th, td{
+    border: 1px solid;
+    border-collapse: collapse;
+    /*border-radius: 30px;*/
+}
+#_book {
+    background-color: rgba(255, 240, 228, 0.5);
+    /*border-radius: 30px ;*/
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    color: #4e342e;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+#submit_db{
+    background-color: #4e342e;
+    color:#fff;
+    padding: 10px 20px;
+    text-align: center;
+    /*border-radius: 30px;*/
+    border: none;
+    font-size: 20px;
+    outline: none;
+    margin-left: 300px;
+}
+.submit_db:hover{
+    background-color:#ede0cf ;
+    color: #4e342e;
 }
 form{
     background-color: rgba(255, 240, 228, 0.5);
@@ -12,7 +63,7 @@ form{
     width: 50%;
     height: 80%;
     border:none;
-    border-radius: 20px;
+    /*border-radius: 20px;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,37 +73,18 @@ form{
     color: #4e342e;
     font-size: 25px;
     font-family: 'Poppins', sans-serif;
-
-
-}
-form:hover{
-
-    box-shadow: 0 0 5px 5px rgba(78, 52, 46, 1);
-}
-.submitdetails{
-    background-color: #4e342e;
-    color:#fff;
-    padding: 10px 20px;
     text-align: center;
-    border-radius: 30px;
-    border: none;
-    font-size: 20px;
-    outline: none;
-    margin-left: 300px;
 }
+
 form div h3{
     text-align: center;
-}
-.submitdetails:hover{
-    background-color:#ede0cf ;
-    color: #4e342e;
 }
 form div input,#bc,#bd{
     background-color: #ede0cf;
     color:#4e342e;
     padding: 10px;
     text-align: center;
-    border-radius: 20px;
+    /*border-radius: 20px;*/
     border-color: #ede0cf;
     font-size: 20px;
     outline: none;
