@@ -11,7 +11,7 @@
 }
 label{
     background-color: rgba(255, 240, 228, 0.5);
-    /*border-radius: 30px ;*/
+    border-radius: 30px ;
     color: #4e342e;
     font-weight: bold;
     font-size: 25px;
@@ -28,7 +28,7 @@ form:hover,#_book:hover {
 }
 #_book {
     background-color: rgba(255, 240, 228, 0.5);
-    /*border-radius: 30px ;*/
+    border-radius: 30px ;
     justify-content: center;
     align-items: center;
     margin-left: auto;
@@ -47,7 +47,7 @@ form:hover,#_book:hover {
     color:#fff;
     padding: 10px 20px;
     text-align: center;
-    /*border-radius: 30px;*/
+    border-radius: 30px;
     border: none;
     font-size: 20px;
     outline: none;
@@ -63,7 +63,7 @@ form{
     width: 50%;
     height: 80%;
     border:none;
-    /*border-radius: 20px;*/
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,7 +84,7 @@ form div input,#bc,#bd{
     color:#4e342e;
     padding: 10px;
     text-align: center;
-    /*border-radius: 20px;*/
+    border-radius: 20px;
     border-color: #ede0cf;
     font-size: 20px;
     outline: none;
