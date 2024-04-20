@@ -1,3 +1,9 @@
+body{
+
+    align-items: center;
+    height: 100vh;
+    background-image:url("8c3ab7aa8fd3c95df0d6243ba6424c53.jpg") ;
+}
 *{
     margin: 0;
     padding: 0;
@@ -30,7 +36,8 @@
     font-weight: 900;
     color: #fffaf1;
     text-decoration: none;
-    
+
+
     /* filter: drop-shadow(1px 1px 3px #4e342e); */
 }
 
@@ -39,10 +46,10 @@
     font-weight: 900;
     font-size: 18px;
     color: #fffaf1;
-    font-weight: 900;
     text-decoration: none;
     margin-left: 100px;
     border-radius: 10px;
+
 }
 
 .navbar a:hover {
@@ -51,6 +58,7 @@
     transition: 0.3s;
     /* filter: drop-shadow(1px 1px 1px #4e342e); */
     color:  #4e342e;
+
 }
 
 

@@ -3,34 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>add new book</title>
-    <meta
-            name =  "description"
-            content = "Add New Book"/>
+    <meta name =  "description" content = "Add New Book"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel ="stylesheet" href = "AdminNav.css">
+    <link rel="stylesheet" href="addnewbook.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-<nav class="admin-nav">
-    <a href="add%20new%20book.html"><span class="nav-item">Add New Book</span></a>|
-    <a href="view%20list.html"><span class="nav-item">Available Books</span></a>|
-    <a href="select%20book%20and%20edit%20its%20details.html"><span class="nav-item">Edit a Book</span></a>|
-    <a href="Delete%20book.html"><span class="nav-item">Delete a Book</span></a>|
-
-</nav>
+<!--<img class="imgback" src="8c3ab7aa8fd3c95df0d6243ba6424c53.jpg" alt="">-->
+<header class = "header">
+    <a href="#" class="logo">Book Store</a>
+    <nav class ="navbar">
+        <a href="add%20new%20book.html">Add new book</a>
+        <a href="view%20list.html">Available books</a>
+        <a href="select%20book%20and%20edit%20its%20details.html">Edit</a>
+        <a href="Delete%20book.html">Delete</a>
+    </nav>
+</header>
 <form method="post">
-    <div>
+
+    <div class="ebook_details">
         <h3>Enter the book details</h3>
-        <label for="bid">Enter Book ID</label>
-        <input type="number" id="bid" value="bid" required min="0" >
+        <br>
+        <label for="bid">Book ID</label>
+        <input type="text" id="bid" value="" required min="0" >
         <br>
         <br>
-        <label for="bn">Enter Book Name</label>
+        <label for="bn">Book Name</label>
         <input type="text" id="bn" value="" required minlength="3" >
         <br>
         <br>
-        <label for="ba">Enter Book Author</label>
+        <label for="ba">Book Author</label>
         <input type="text" id="ba" value="" required minlength="3" >
         <br>
         <br>
-        <label for="bc">Enter Book Category</label>
+        <label for="bc">Book Category</label>
         <select name="book category" id="bc" required>
             <option value="c">Adventure</option>
             <option value="c">Romance</option>
@@ -42,13 +49,11 @@
         <br>
         <br>
         <div>
-            <label for="bd">Enter Book Description</label>
-            <textarea name="book_description" id="bd" cols="30" rows="5" required></textarea>
+            <label for="bd">Book Description</label>
+            <textarea name="book_description" id="bd" required></textarea>
         </div>
         <br>
-        <br>
-        <input type="submit" name="" value="Submit">
-        <input type="reset" name="" value="Reset">
+        <input type="submit" class="submitdetails" value="Submit">
     </div>
 </form>
 </body>
