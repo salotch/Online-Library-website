@@ -1,0 +1,133 @@
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+   
+}
+
+body{
+    background-image: url("8c3ab7aa8fd3c95df0d6243ba6424c53.jpg");
+    
+}
+
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.01);
+    transition: box-shadow 0.3s;
+}
+
+header:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.user-nav a{
+    position: sticky;
+    font-weight: 900;
+    font-size: 18px;
+    color: #fffaf1;
+    font-weight: 900;
+    text-decoration: none;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+.user-nav a:hover {
+    transform: scale(1.1);
+    font-weight: 900;
+    transition: 0.3s;
+    /* filter: drop-shadow(1px 1px 1px #4e342e); */
+    color:  #4e342e;
+}
+
+.logo{
+    font-size: 32px;
+    font-style:italic;
+    font-weight: 900;
+    color: #fffaf1;
+    text-decoration: none;
+
+    /* filter: drop-shadow(1px 1px 3px #4e342e); */
+}
+
+
+.user-nav a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    font-weight: 900;
+    background:#4e342e;
+    transition: .5s;
+
+}
+.user-nav a:hover:before{
+    width: 100%;
+}
+
+
+.books-container {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.book {
+  
+    margin-right: 20px; 
+   text-align: center; 
+    padding:60px;
+}
+
+
+.book img {
+    margin-top: 10px;
+    width: 250px; 
+    height: auto; 
+    margin-bottom: 10px;
+}
+
+
+p{
+    border-radius: 7px;;
+    margin-bottom: 7px;;
+    padding: 15px;;
+    font-size: 20px;;
+    font-weight:bold ;
+    color:#4c3730;
+    background-image: linear-gradient(to right,#d2b48c,#ede0cf,white);
+}
+
+
+.book button {
+    padding: 20px; 
+    background-color: #6d4c41;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.book button:hover{
+    background-color: #fff;
+    color:rgb(132, 97, 52);
+}
+
+
