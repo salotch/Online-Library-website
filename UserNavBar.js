@@ -20,11 +20,6 @@ document.addEventListener('DOMContentLoaded', function(){
         filteredBooks.forEach(book => {
             const listItem = document.createElement('li');
             listItem.textContent = book;
-        
-            listItem.addEventListener('click', function() {
-               
-                window.location.href = "index.html";
-            });
             searchList.appendChild(listItem);
         });
         
