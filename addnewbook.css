@@ -40,6 +40,9 @@ form:hover{
     outline: none;
     margin-left: 300px;
 }
+form div h3{
+    text-align: center;
+}
 .submitdetails:hover{
     background-color:#ede0cf ;
     color: #4e342e;
