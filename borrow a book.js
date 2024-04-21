@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var phone = document.querySelector('input[name="user"]').value;
         var address = document.querySelector('input[name="user"]').value;
         var bookName = document.querySelector('input[name="user"]').value;
+        var bookId = document.querySelector('input[name="user"]').value;
 
         // Create an object to represent the borrowed book
         var borrowedBook = {
@@ -17,7 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
             email: email,
             phone: phone,
             address: address,
-            bookName: bookName
+            bookName: bookName,
+            bookID: bookId
         };
 
         // Store the borrowed book in local storage
