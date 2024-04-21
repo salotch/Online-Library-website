@@ -1,0 +1,37 @@
+div {
+    position: static;
+    top: 60%;
+    width: 50%;
+    font-size: 18px;
+    margin-left: 25%;
+    margin-top: 200px;
+}
+
+
+#Books {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    position: absolute;
+
+}
+
+#Books td,
+#Books th {
+    background-color: whitesmoke;
+    border: 3px solid #0b0b0b;
+    padding: 8px;
+    width: min-content;
+}
+
+#Books tr :hover {
+    background-color: #ddd;
+}
+
+#Books th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #c9970fd4;
+    color: white;
+}

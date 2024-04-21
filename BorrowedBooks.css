@@ -1,0 +1,40 @@
+* {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-align: center;
+
+}
+
+
+b {
+    font-size: 200%;
+    margin-top: 20%;
+    background-color: burlywood;
+}
+
+#available_books {
+    background-color: burlywood;
+    margin-left: 250px;
+    margin-top: 10%;
+}
+
+#available_books td,
+#available_books th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#available_books tr:hover {
+    background-color: #ddd;
+}
+
+#available_books th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
