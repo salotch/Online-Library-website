@@ -1,14 +1,17 @@
-body{
-
-    align-items: center;
-    height: 100vh;
-    background-image:url("8c3ab7aa8fd3c95df0d6243ba6424c53.jpg") ;
-}
-*{
+* {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("cool secret bookshelf door diy hidden doors aesthetics secret room ideas secret safe hiding storage.jpeg");
+    height: 100vh;
+    width:100%;
+    background-position: center;
+    background-size: cover;
 }
 
 .header{
@@ -76,6 +79,29 @@ body{
 }
 .navbar a:hover:before{
     width: 100%;
+}
+
+
+.content{
+    width:100%;
+    position:absolute;
+    top:200px;
+    text-align: center;
+    color: #d2b48c;
+
+}
+
+
+.content h1{
+    font-size: 70px;
+    margin-top: 25px;
+}
+
+
+.content p{
+    margin:20px auto;
+    font-weight: 100;
+    line-height: 25px;
 }
 
 
