@@ -20,21 +20,19 @@ label{
     font-size: 27px;
     width: auto;
     height: auto;
-    padding: 4px;
+    padding: 7px;
+    /*display: block;*/
 }
-form:hover, #_book:hover ,label:hover {
+form:hover, #_book:hover ,label:hover ,button:hover{
     box-shadow: 0 0 5px 5px rgba(78, 52, 46, 1);
     border-radius: 30px;
 }
-#_book ,th, td{
 
-    border-radius: 30px;
-    padding:15px;
-    outline: none;
-}
-#_book {
+#_book ,th, td{
     background-color: rgba(255, 240, 228, 0.5);
-    /*border-radius: 30px ;*/
+    border-radius: 30px ;
+    padding:8px;
+    outline: none;
     justify-content: center;
     align-items: center;
     margin-left: auto;
@@ -50,7 +48,7 @@ form:hover, #_book:hover ,label:hover {
 /*
 for add new book page
 */
-#submit_db{
+button{
     background-color: #4e342e;
     color:#fff;
     padding: 10px 20px;
@@ -61,15 +59,21 @@ for add new book page
     outline: none;
     margin-left: 300px;
 }
-.submit_db:hover{
+button:hover{
     background-color:#ede0cf ;
     color: #4e342e;
+    border:1px solid #4e342e;
+}
+#should_hide,#should_show{
+    margin: auto;
+    padding: 50px;
+    display: block;
 }
 form{
     background-color: rgba(255, 240, 228, 0.5);
-    padding: 100px;
+    padding: 50px;
     width: 50%;
-    height: 80%;
+    height: auto;
     border:none;
     border-radius: 20px;
     display: flex;
@@ -84,10 +88,8 @@ form{
     text-align: center;
 }
 
-form div h3{
-    text-align: center;
-}
-form div input,#bc,#bd{
+/**/
+form div input,#bd,select{
     background-color: #ede0cf;
     color:#4e342e;
     padding: 10px;
@@ -97,8 +99,7 @@ form div input,#bc,#bd{
     font-size: 20px;
     outline: none;
 }
-form div input:hover,#bc:hover,#bd:hover{
+form div input:hover,#bd:hover,select:hover{
     border:1px solid #4e342e;
 
 }
-

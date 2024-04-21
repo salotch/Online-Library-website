@@ -26,7 +26,7 @@
         <h3>Enter the book details</h3>
         <br>
         <label for="bid">Book ID</label>
-        <input type="text" id="bid"  required min="0" >
+        <input type="text" id="bid"  required min="1" >
         <br>
         <br>
         <label for="bn">Book Name</label>
@@ -39,7 +39,8 @@
         <br>
         <label for="bc">Book Category</label>
         <select name="book category" id="bc" required>
-<!--             options content from javascript-->
+            <option disabled selected value="">Categories</option>
+            <!--             options content from javascript-->
         </select>
         <br>
         <br>
@@ -48,7 +49,7 @@
             <textarea name="book_description" id="bd" required></textarea>
         </div>
         <br>
-        <button id="submit_db" onclick="savebook()" >Submit</button>
+        <button id="submit_db" onclick="savebook()" >Done</button>
     </div>
 </form>
 </body>
