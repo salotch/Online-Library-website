@@ -4,13 +4,15 @@ function savebook() {
         n:document.getElementById("bn").value,
         a:document.getElementById("ba").value,
         c:document.getElementById("bc").value,
-        d:document.getElementById("bd").value
+        d:document.getElementById("bd").value,
+        av:"available"
     };
     localStorage.setItem("book_"+Date.now(),JSON.stringify(book));
+        alert('Book Added Successfully');
 }
 document.addEventListener('DOMContentLoaded', function(){
     let taskList = document.getElementById('_book')
-    console.log(taskList)
+    // console.log(taskList)
     for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
         const task = localStorage.getItem(key);
@@ -22,13 +24,13 @@ document.addEventListener('DOMContentLoaded', function(){
             let tdd=document.createElement("td");
             let prp = data.id;
             tdd.textContent=prp;
-            console.log(prp);
+            // console.log(prp);
             trr.appendChild(tdd);
 
             tdd=document.createElement("td");
             prp= data.n;
             tdd.textContent = prp;
-            console.log(prp);
+            // console.log(prp);
             trr.appendChild(tdd);
 
             tdd=document.createElement("td");
@@ -48,9 +50,23 @@ document.addEventListener('DOMContentLoaded', function(){
 
             taskList.appendChild(trr);
         }
-
-
     }});
+// for select category options
+document.addEventListener('DOMContentLoaded', function(){
+    let categories = ["Adventure", "Romance", "Self Help", "Fantasia", "Horror", "Historical Fiction"];
+    let element=document.getElementById("bc");
+    for (let i = 0; i < categories.length; i++) {
+        let option_ele=document.createElement("option");
+        option_ele.value=categories[i];
+        option_ele.textContent=categories[i];
+        element.appendChild(option_ele);
+    }
+});
+
+
+
+
+
 // document.addEventListener('DOMContentLoaded', function() {
 //     const myButton = document.getElementById('myDynamicButton');
 //     myButton.addEventListener('click', function() {
