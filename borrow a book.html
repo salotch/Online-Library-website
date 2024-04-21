@@ -1,70 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
+    <title>List of borrow book</title>
     <meta charset="UTF-8">
-    <title>Borrow a Book</title>
-    <meta name="description" content="Borrow a Book" />
-    <link rel="stylesheet" href="AdminNav.css">
-    <link rel="stylesheet" href="borrow a book.css">
-    <script src="borrow a book.js"></script>
+    <link rel="stylesheet" href="CSS File/AdminNav.css">
+    <link rel="stylesheet" href="CSS File/borrow book by user.css">
+    <script src="Java File/borrow_book_by_user.js"></script>
 </head>
 
 <body>
     <header class="header">
         <a href="#" class="logo">Book Store</a>
         <nav class="navbar">
-            <a href="BorrowedBooks.html"><span class="nav-item">Available Books</span></a>|
-            <a href="selec%20a%20book%20user.html"><span class="nav-item">Book Details</span></a>|
-            <a href="borrow%20a%20book.html"><span class="nav-item">Borrow</span> </a>|
-            <a href="borrow_book_by_user.html"><span class="nav-item">Borrowed Books</span></a>|
+            <a href="BorrowedBooks.html"><span class="nav-item">Available Books</span></a>
+            <a href="selec%20a%20book%20user.html"><span class="nav-item">Book Details</span></a>
+            <a href="borrow%20a%20book.html"><span class="nav-item">Borrow</span> </a>
+            <a href="borrow_book_by_user.html"><span class="nav-item">Borrowed Books</span></a>
             <a href="about.html"><span class="nav-item">About</span></a>
         </nav>
     </header>
     <br>
-    <h1>Borrow a Book</h1>
-    <form id="borrowForm" action="#" method="POST">
-        <div class="BBS">
-            <div>
-                <label>Enter your first name</label>
-                <input type="text" required placeholder="first name" name="user">
-            </div>
-            <br>
-            <div>
-                <label>Enter your last name</label>
-                <input type="text" required placeholder="last name" name="user">
-            </div>
-            <br>
-            <div>
-                <label>Enter your Email address</label>
-                <input type="email" required placeholder=" email address" name="user">
-            </div>
-            <br>
-            <div>
-                <label>Enter your mobile phone</label>
-                <input type="text" required placeholder=" phone number" name="user">
-            </div>
-            <br>
-            <div>
-                <label>Enter your address</label>
-                <input type="text" required placeholder=" address" name="user">
-            </div>
-            <br>
-            <div>
-                <label>Enter the name of the book</label>
-                <input type="text" required placeholder=" book name" name="user">
-            </div>
-            <br>
-            <div>
-                <label>Enter the ID of the book</label>
-                <input type="number" required placeholder=" book ID" name="user">
-            </div>
-            <br>
-            <div>
-                <button type="submit" class="btn">submit</button>
-            </div>
-        </div>
-    </form>
-</body>
+    <div>
+        <caption><b>Name of books that borrowed by this user</b></caption>
+        <br>
+        <table id="Books">
+            <thead>
+                <tr>
+                    <th>number</th>
+                    <th>Book's name</th>
+                </tr>
+            </thead>
+            <tbody id="borrowedBooksTable">
 
-</html>
+            </tbody>
+            <tfoot>
+                <tr>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>

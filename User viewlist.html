@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta
+            name =  "description"
+            content = "view list of available books"/>
+    <title>view list of available books</title>
     <link rel ="stylesheet" href = "CSS File/UserNavBar.css">
+    <link rel="stylesheet" href="CSS File/addnewbook.css">
+    <script src="Java File/addnewbook.js"></script>
     <script src="Java File/UserNavBar.js"></script>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-     <title>LOGIN</title>
 </head>
 <body>
-
-  
-
-
     <header class = "header">
         <a href="#" class="logo">Book Store</a>
 
@@ -31,15 +29,22 @@
         </div>
 
     </header>
-
-
-    <div class="content">
-        <h1>Welcome User</h1>
-        <p>Web application that allows customers to buy books online. Customers can search for a book by title or author using a web browser,<br> add it to their shopping cart, and then purchase it using a debit or credit card transaction.</p>
-        <a href="sign_up.html" target="_blank">
-    
-    </div>
-
-    
+<br>
+<br>
+<div class="hs">
+    <label for="_book">Available Books</label>
+    <table id="_book" >
+        <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Author</td>
+            <td>Category</td>
+            <td>description</td>
+            <td>Book Availability</td>
+        </tr>
+        </thead>
+    </table>
+</div>
 </body>
-    </html>
+</html>
