@@ -3,23 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>select book and edit</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel ="stylesheet" href = "AdminNav.css">
+    <link rel="stylesheet" href="addnewbook.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <meta
             name =  "description"
             content = "select book and edit its details"/>
 </head>
 <body>
-<nav class="admin-nav">
-    <a href="add%20new%20book.html"><span class="nav-item">Add New Book</span></a>|
-    <a href="view%20list.html"><span class="nav-item">Available Books</span></a>|
-    <a href="select%20book%20and%20edit%20its%20details.html"><span class="nav-item">Edit a Book</span></a>|
-    <a href="Delete%20book.html"><span class="nav-item">Delete a Book</span></a>|
 
-</nav>
+<header class = "header">
+    <a href="#" class="logo">Book Store</a>
+    <nav class ="navbar">
+        <a href="add%20new%20book.html">Add new book</a>
+        <a href="view%20list.html">Available books</a>
+        <a href="select%20book%20and%20edit%20its%20details.html">Edit</a>
+        <a href="Delete%20book.html">Delete</a>
+    </nav>
+</header>
+
 <form method="post">
     <div>
         <h3>Edit the book details</h3>
         <label for="bid">Enter Book ID</label>
-        <input type="number" id="bid" value="bid" required min="0" >
+        <input type="text" id="bid" value="" required min="0" >
         <br>
         <br>
         <label for="bn">Enter Book Name</label>
@@ -32,11 +40,11 @@
         <br>
         <label for="bc">Enter Book Category</label>
         <select name="book category" id="bc" required>
-            <option value="c" >Adventure</option>
-            <option value="c">Romance</option>
-            <option value="c">Fantasia</option>
-            <option value="c">Horror</option>
-            <option value="c">Historical Fiction</option>
+<!--            <option value="c" >Adventure</option>-->
+<!--            <option value="c">Romance</option>-->
+<!--            <option value="c">Fantasia</option>-->
+<!--            <option value="c">Horror</option>-->
+<!--            <option value="c">Historical Fiction</option>-->
         </select>
         <br>
         <br>

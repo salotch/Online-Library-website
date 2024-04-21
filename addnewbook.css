@@ -6,6 +6,9 @@
     border:none;
     text-align: center;
 }
+/*
+for view list of available book admin side
+*/
 #_book thead{
     font-weight: bold;
 }
@@ -14,21 +17,24 @@ label{
     border-radius: 30px ;
     color: #4e342e;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 27px;
     width: auto;
     height: auto;
+    padding: 4px;
 }
-form:hover,#_book:hover {
+form:hover, #_book:hover ,label:hover {
     box-shadow: 0 0 5px 5px rgba(78, 52, 46, 1);
+    border-radius: 30px;
 }
 #_book ,th, td{
-    border: 1px solid;
-    border-collapse: collapse;
-    /*border-radius: 30px;*/
+
+    border-radius: 30px;
+    padding:15px;
+    outline: none;
 }
 #_book {
     background-color: rgba(255, 240, 228, 0.5);
-    border-radius: 30px ;
+    /*border-radius: 30px ;*/
     justify-content: center;
     align-items: center;
     margin-left: auto;
@@ -41,7 +47,9 @@ form:hover,#_book:hover {
     height: auto;
     text-align: center;
 }
-
+/*
+for add new book page
+*/
 #submit_db{
     background-color: #4e342e;
     color:#fff;
