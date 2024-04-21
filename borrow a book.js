@@ -3,13 +3,12 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault(); // Prevent default form submission
 
         // Get form data
-        var firstName = document.querySelector('input[name="user"]').value;
-        var lastName = document.querySelector('input[name="user"]').value;
-        var email = document.querySelector('input[name="user"]').value;
-        var phone = document.querySelector('input[name="user"]').value;
-        var address = document.querySelector('input[name="user"]').value;
-        var bookName = document.querySelector('input[name="user"]').value;
-        var bookId = document.querySelector('input[name="user"]').value;
+        var firstName = document.querySelector('input[name="fn"]').value;
+        var lastName = document.querySelector('input[name="ln"]').value;
+        var email = document.querySelector('input[name="ea"]').value;
+        var phone = document.querySelector('input[name="pn"]').value;
+        var address = document.querySelector('input[name="ad"]').value;
+        var bookName = document.querySelector('input[name="bn"]').value;
 
         // Create an object to represent the borrowed book
         var borrowedBook = {
