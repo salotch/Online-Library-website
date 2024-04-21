@@ -9,6 +9,7 @@ function checkEquality() {
         }
         else
         {
+            m.textContent = '';
             window.open("login.html","-blank");
             
         }
