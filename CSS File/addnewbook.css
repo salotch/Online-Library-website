@@ -134,3 +134,14 @@ form div input:hover,#bd:hover,select:hover{
     background-position:center ;
     background-color: #ede0cf;
 }
+img{
+    text-align: center;
+    justify-items: center;
+    width: 400px ;
+    padding: 10px;
+    height: 200px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position:center ;
+    background-color: #ede0cf;
+}
