@@ -1,16 +1,22 @@
 // localStorage.clear()
+
+
+
 function savebook() {
+
     let book= {
         id: document.getElementById("bid").value,
         n:document.getElementById("bn").value,
         a:document.getElementById("ba").value,
         c:document.getElementById("bc").value,
         d:document.getElementById("bd").value,
-        av:"Available"
+        av:"Available",
+        img:document.getElementById("input-file").src
     };
-    // console.log(taskList)
+
+    // console.log(book.img);
     if(localStorage.length>0) {
-        var flag = 1;
+        let flag = 1;
         for (let i = 0; i < localStorage.length; i++) {
             const key = localStorage.key(i);
             const task = localStorage.getItem(key);
@@ -38,14 +44,15 @@ function savebook() {
         }
 
     }
-    else if(book.id===""||book.a===""||book.n===""||book.c.value ===undefined)
+    else if(book.id===""||book.a===""||book.n===""||book.c.length ===0)
     {
         alert('Cannot Add Empty Space');
     }
     else{
         localStorage.setItem("book_" + Date.now(), JSON.stringify(book));
-        alert('Book Added Successfullyy');
+        alert('Book Added Successfully');
     }
+
 }
 
 
@@ -92,6 +99,15 @@ document.addEventListener('DOMContentLoaded', function() {
             tdd = document.createElement("td");
             prp = data.av;
             tdd.textContent = prp;
+            trr.appendChild(tdd);
+
+            tdd = document.createElement("td");
+            let image_tag =document.createElement("img")
+            prp = data.img;
+            image_tag.src=prp;
+            tdd.appendChild(image_tag);
+            image_tag.style.width="100px";
+            image_tag.style.height="100px";
             trr.appendChild(tdd);
 
             taskList.appendChild(trr);
@@ -194,6 +210,9 @@ function retrieve_to_edit(id_value){
                 let v=document.getElementById("bav");
                 v.value=data.av;
 
+                let i=document.getElementById("img-view");
+                i.style.backgroundImage=`url(${data.img})`;
+
             }
         }
     }
@@ -205,7 +224,8 @@ function save_edit()
     a:document.getElementById("ba").value,
     c:document.getElementById("bc").value,
     d:document.getElementById("bd").value,
-    av:document.getElementById("bav").value
+    av:document.getElementById("bav").value,
+    img:document.getElementById("input-file").src
 };
 
     if(book.id===""||book.a===""||book.n===""||book.c ==="")
@@ -229,3 +249,26 @@ function save_edit()
     }
 }
 
+
+
+function upload_image(){
+    const input_file=document.getElementById("input-file");
+    const img_view=document.getElementById("img-view");
+
+    let img_link=URL.createObjectURL( input_file.files[0]);
+    img_view.style.backgroundImage=`url(${img_link})`;
+    img_view.textContent=""
+    img_view.style.border ="0";
+
+}
+addEventListener('DOMContentLoaded', function() {
+    const file=document.getElementById("input-file");
+    file.addEventListener('change',()=>{
+        const fr = new FileReader();
+        fr.readAsDataURL(file.files[0]);
+        fr.addEventListener('load',()=>{
+            const url=fr.result;
+            file.src = url;
+        })
+    })
+});

@@ -3,45 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS File/selectUserbook.css" />
+    <link rel="stylesheet" href="CSS%20File/selectUserbook.css" />
+    <link rel="stylesheet" href="CSS%20File/UserNavBar.css">
     <title>Book Selection</title>
+    <script src="Java%20File/select book and view details.js"  ></script>
+    <script src="Java%20File/UserNavBar.js"></script>
+    <script src="Java%20File/addnewbook.js"></script>
 
 </head>
 <body>
-    <header class="header">
-      <a href="#" class="logo">Book Selection</a>
+<header class = "header">
+    <a href="#" class="logo">Book Store</a>
 
-    <nav class="user-nav">
-        <a href="BorrowedBooks.html"><span class="nav-item">Available Books</span></a>
-        <a href="selec%20a%20book%20user.html"><span class="nav-item">Book Details</span></a>
-        <a href="borrow%20a%20book.html"><span class="nav-item">Borrow</span> </a>
-        <a href="borrow_book_by_user.html"><span class="nav-item">Borrowed Books</span></a>
+    <nav class ="navbar">
+        <a href="UserNavBar.html">Home</a>
+        <a href="User viewlist.html">Available books</a>
+        <a href="borrow_book_by_user.html">Borrowed Books</a>
     </nav>
 
-   </header>
-   
-   <div class="books-container">
-    
-    <div class="book">
-        <img src="Images/content.jpeg" alt="Book 1 Cover">
-        <p>Price: $20</p>
-        <button class="DetailsBtn" data-book="1">View Details</button>
+
+    <div class="search-container">
+        <input type="text" placeholder="Search for a book.." class="search-bar" id="searchInput">
+        <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+        <ul class="search-list" id="searchList"></ul>
     </div>
 
-   
-    <div class="book">
-        <img src="Images/fdea56fa-2703-47c1-8da8-70fc5382e1ea.jpg" alt="Book 2 Cover">
-        <p>Price: $18</p>
-        <button class="DetailsBtn" data-book="2">View Details</button>
-    </div>
+</header>
 
-   
-    <div class="book">
-        <img src="Images/The_Help_(2011_film).jpg" alt="Book 3 Cover">
-        <p>Price: $22</p>
-        <button class="DetailsBtn" data-book="3">View Details</button>
+<div class="books-container" id="books-container"></div>
+
+<form id="book-details" style="display: none">
+    <div>
+        <label>  Book Details  </label>
+        <br>
+        <br>
+        <label for="input-file" id="drop-area">
+            <input type="file" id="input-file" accept="image/*" disabled hidden>
+            <div id="img-view"></div>
+        </label>
+        <br>
+        <br>
+        <label for="bid">Book ID</label>
+        <input type="text" id="bid" disabled  >
+        <br>
+        <br>
+        <label for="bn">Book Name</label>
+        <input type="text" id="bn"  disabled >
+        <br>
+        <br>
+        <label for="ba">Book Author</label>
+        <input type="text" id="ba" disabled >
+        <br>
+        <br>
+        <label for="bc">Book Category</label>
+        <input type="text" name="book category" id="bc" disabled>
+        <!--   options content from javascript-->
+        <br>
+        <br>
+        <label for="bd">Book Description</label>
+        <textarea name="book_description" id="bd" disabled></textarea>
+        <br>
+        <br>
+        <label for="bav">Book Availability</label>
+        <input name="Book Availability" id="bav" disabled >
+        <!--             options content from javascript-->
+
+        <br>
+        <br>
     </div>
-</div>
-    <script src="Java File/select book and view details.js"></script>
+</form>
+
+
 </body>
 </html>

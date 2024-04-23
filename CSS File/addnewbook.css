@@ -1,3 +1,9 @@
+body{
+
+    align-items: center;
+    height: 100vh;
+    /*background-image:url("Images/8c3ab7aa8fd3c95df0d6243ba6424c53.jpg") ;*/
+}
 * {
     font-family: Arial, sans-serif;
     box-sizing: border-box;
@@ -5,6 +11,7 @@
     padding: 0;
     border:none;
     text-align: center;
+
 }
 /*
 for view list of available book admin side
@@ -45,6 +52,7 @@ form:hover, #_book:hover ,label:hover ,button:hover{
     height: auto;
     text-align: center;
 }
+
 /*
 for add new book page
 */
@@ -102,4 +110,27 @@ form div input,#bd,select{
 form div input:hover,#bd:hover,select:hover{
     border:1px solid #4e342e;
 
+}
+
+#drop-area,#drop-area:hover{
+    background-color: transparent;
+    box-shadow: 0 0 0 0;
+    width:500px ;
+    padding: 10px;
+    height: 300px;
+    border-radius: 20px;
+    text-align: center;
+
+}
+#img-view{
+    text-align: center;
+    justify-items: center;
+    width: 400px ;
+    padding: 10px;
+    height: 200px;
+    border-radius: 20px;
+    border: 2px dashed #4e342e;
+    background-size: cover;
+    background-position:center ;
+    background-color: #ede0cf;
 }

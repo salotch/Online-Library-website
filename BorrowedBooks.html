@@ -7,20 +7,28 @@
     <title>view list of borrowed books</title>
     <link rel="stylesheet" href="CSS File/AdminNav.css">
     <link rel="stylesheet" href="CSS File/BorrowedBooks.css">
+    <script src="Java%20File/UserNavBar.js"></script>
 </head>
 
 <body>
 
-    <header class="header">
-        <a href="#" class="logo">Book Store</a>
-        <nav class="navbar">
-            <a href="BorrowedBooks.html"><span class="nav-item">Available Books</span></a>
-            <a href="selec%20a%20book%20user.html"><span class="nav-item">Book Details</span></a>
-            <a href="borrow%20a%20book.html"><span class="nav-item">Borrow</span> </a>
-            <a href="borrow_book_by_user.html"><span class="nav-item">Borrowed Books</span></a>
-            <a href="about.html"><span class="nav-item">About</span></a>
-        </nav>
-    </header>
+<header class = "header">
+    <a href="#" class="logo">Book Store</a>
+
+    <nav class ="navbar">
+        <a href="UserNavBar.html">Home</a>
+        <a href="User viewlist.html">Available books</a>
+        <a href="borrow_book_by_user.html">Borrowed Books</a>
+    </nav>
+
+
+    <div class="search-container">
+        <input type="text" placeholder="Search for a book.." class="search-bar" id="searchInput">
+        <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+        <ul class="search-list" id="searchList"></ul>
+    </div>
+
+</header>
     <br>
     <br>
     <div>
