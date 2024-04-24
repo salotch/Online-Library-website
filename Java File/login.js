@@ -6,7 +6,7 @@ function storeData(){
     };
     var me= document.getElementById('eml');
     var mesg= document.getElementById('pd');
-    if(data.username=="")
+    if(data.username ==="")
     {
         me.innerHTML = "Email cannot be empty!";
         return false;
@@ -15,7 +15,7 @@ function storeData(){
     {
         mesg.innerHTML=""
     }
-    if(data.Password=="")
+    if(data.Password ==="")
     {
         mesg.innerHTML = "Passwword cannot be empty!";
         return false;
@@ -39,7 +39,7 @@ function storeData(){
             else{
                 mesg.innerHTML="";
                 if(userData[i].is_admin)
-                window.open("AdminNavBar.htm","_blank");
+                window.open("AdminNav.html","_blank");
                 else
                 window.open("UserNavBar.html","_blank");
                 return true;

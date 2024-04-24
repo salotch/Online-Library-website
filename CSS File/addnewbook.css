@@ -4,6 +4,9 @@ body{
     height: 100vh;
     /*background-image:url("Images/8c3ab7aa8fd3c95df0d6243ba6424c53.jpg") ;*/
 }
+html {
+    scroll-behavior: smooth;
+}
 * {
     font-family: Arial, sans-serif;
     box-sizing: border-box;
@@ -35,21 +38,21 @@ form:hover, #_book:hover ,label:hover ,button:hover{
     border-radius: 30px;
 }
 
-#_book ,th, td{
+#_book ,th,td{
     background-color: rgba(255, 240, 228, 0.5);
     border-radius: 30px ;
     padding:8px;
     outline: none;
     justify-content: center;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 150px;
+    margin-right: 150px;
     margin-top: 30px;
     color: #4e342e;
     font-size: 25px;
     font-family: 'Poppins', sans-serif;
-    width: auto;
-    height: auto;
+    width: fit-content;
+    height: fit-content;
     text-align: center;
 }
 
@@ -125,21 +128,23 @@ form div input:hover,#bd:hover,select:hover{
 #img-view{
     text-align: center;
     justify-items: center;
-    width: 400px ;
+    width: 350px ;
     padding: 10px;
-    height: 200px;
+    height:450px;
     border-radius: 20px;
     border: 2px dashed #4e342e;
     background-size: cover;
     background-position:center ;
     background-color: #ede0cf;
+    margin-right: 20px;
 }
 img{
     text-align: center;
     justify-items: center;
-    width: 400px ;
-    padding: 10px;
-    height: 200px;
+    width: 350px ;
+    padding: 2px;
+    height: 450px;
+
     border-radius: 20px;
     background-size: cover;
     background-position:center ;

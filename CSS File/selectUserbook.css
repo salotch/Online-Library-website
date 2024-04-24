@@ -10,11 +10,10 @@
 
 }
 #img-view{
-    text-align: center;
     justify-items: center;
-    width: 400px ;
+    width: 350px ;
     padding: 10px;
-    height: 200px;
+    height: 450px;
     border-radius: 20px;
     border: 2px dashed #4e342e;
     background-size: cover;
