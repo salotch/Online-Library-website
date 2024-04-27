@@ -3,93 +3,40 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="view list of borrowed books" />
-    <title>view list of borrowed books</title>
-    <link rel="stylesheet" href="CSS File/AdminNav.css">
-    <link rel="stylesheet" href="CSS File/BorrowedBooks.css">
-    <script src="Java%20File/UserNavBar.js"></script>
+    <meta name="description" content="view list of available books" />
+    <title>view list of available books</title>
+    <link rel="stylesheet" href="AdminNav.css">
+    <link rel="stylesheet" href="addnewbook.css">
+    <script src="addnewbook.js"></script>
 </head>
 
 <body>
-
-<header class = "header">
-    <a href="#" class="logo">Book Store</a>
-
-    <nav class ="navbar">
-        <a href="homeWithNavhtml">Home</a>
-        <a href="User viewlist.html">Available books</a>
-        <a href="borrow_book_by_user.html">Borrowed Books</a>
-    </nav>
-
-
-    <div class="search-container">
-        <input type="text" placeholder="Search for a book.." class="search-bar" id="searchInput">
-        <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
-        <ul class="search-list" id="searchList"></ul>
-    </div>
-
-</header>
+    <header class="header">
+        <a href="#" class="logo">Book Store</a>
+        <nav class="navbar">
+            <a href="add%20new%20book.html">Add new book</a>
+            <a href="view%20list.html">Available books</a>
+            <a href="select%20book%20and%20edit%20its%20details.html">Edit</a>
+            <a href="Delete%20book.html">Delete</a>
+        </nav>
+    </header>
     <br>
     <br>
-    <div>
-        <label for="available_books"><b>Available Books</b></label>
-        <table id="available_books">
+    <div class="hs">
+        <label for="_book">Available Books</label>
+        <table id="_book">
             <thead>
                 <tr>
                     <td>ID</td>
                     <td>Name</td>
                     <td>Author</td>
                     <td>Category</td>
-                    <td>Availability</td>
+                    <td>description</td>
+                    <td>Book Availability</td>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>The Help</td>
-                    <td>Kathryn Stockett</td>
-                    <td>Historical Fiction</td>
-                    <td>Borrowed</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Harry Potter and the Sorcerer’s Stone</td>
-                    <td>J.K. Rowling</td>
-                    <td>Fantasia</td>
-                    <td>Borrowed</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Divergent</td>
-                    <td>Veronica Roth</td>
-                    <td>Adventure</td>
-                    <td>Available</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>The Fault in Our Stars</td>
-                    <td> John Green</td>
-                    <td>Romance</td>
-                    <td>Available</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>What Feasts at Night</td>
-                    <td>T. Kingfisher</td>
-                    <td>Horror</td>
-                    <td>Borrowed</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change</td>
-                    <td>Stephen R. Covey</td>
-                    <td>Self Help</td>
-                    <td>Available</td>
-                </tr>
-            </tbody>
         </table>
     </div>
-
 </body>
 
 </html>

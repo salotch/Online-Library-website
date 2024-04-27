@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta
-            name =  "description"
-            content = "view list of available books"/>
+    <meta name="description" content="view list of available books" />
     <title>view list of available books</title>
-    <link rel ="stylesheet" href = "CSS File/UserNavBar.css">
+    <link rel="stylesheet" href="CSS File/UserNavBar.css">
     <link rel="stylesheet" href="CSS File/addnewbook.css">
     <script src="Java File/addnewbook.js"></script>
     <script src="Java File/UserNavBar.js"></script>
 </head>
+
 <body>
-    <header class = "header">
+    <header class="header">
         <a href="#" class="logo">Book Store</a>
 
-        <nav class ="navbar">
+        <nav class="navbar">
             <a href="homeWithNav.html">Home</a>
             <a href="User viewlist.html">Available books</a>
             <a href="borrow_book_by_user.html">Borrowed Books</a>
         </nav>
-        
-        
+
+
         <div class="search-container">
             <input type="text" placeholder="Search for a book.." class="search-bar" id="searchInput">
             <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
@@ -29,22 +29,23 @@
         </div>
 
     </header>
-<br>
-<br>
-<div class="hs">
-    <label for="_book">Available Books</label>
-    <table id="_book" >
-        <thead>
-        <tr>
-            <td>ID</td>
-            <td>Name</td>
-            <td>Author</td>
-            <td>Category</td>
-            <td>description</td>
-            <td>Book Availability</td>
-        </tr>
-        </thead>
-    </table>
-</div>
+    <br>
+    <br>
+    <div class="hs">
+        <label for="_book">Available Books</label>
+        <table id="_book">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Name</td>
+                    <td>Author</td>
+                    <td>Category</td>
+                    <td>description</td>
+                    <td>Book Availability</td>
+                </tr>
+            </thead>
+        </table>
+    </div>
 </body>
+
 </html>

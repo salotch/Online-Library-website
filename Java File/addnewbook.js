@@ -4,18 +4,18 @@
 
 function savebook() {
 
-    let book= {
+    let book = {
         id: document.getElementById("bid").value,
-        n:document.getElementById("bn").value,
-        a:document.getElementById("ba").value,
-        c:document.getElementById("bc").value,
-        d:document.getElementById("bd").value,
-        av:"Available",
-        img:document.getElementById("input-file").src
+        n: document.getElementById("bn").value,
+        a: document.getElementById("ba").value,
+        c: document.getElementById("bc").value,
+        d: document.getElementById("bd").value,
+        av: "Available",
+        img: document.getElementById("input-file").src
     };
 
     // console.log(book.img);
-    if(localStorage.length>0) {
+    if (localStorage.length > 0) {
         let flag = 1;
         for (let i = 0; i < localStorage.length; i++) {
             const key = localStorage.key(i);
@@ -28,8 +28,7 @@ function savebook() {
                     flag--;
                     return;
                 }
-                if(book.id===""||book.a===""||book.n===""||book.c.length===0)
-                {
+                if (book.id === "" || book.a === "" || book.n === "" || book.c.length === 0) {
                     alert('Cannot Add Empty Space');
                     flag--;
                     return;
@@ -38,17 +37,16 @@ function savebook() {
 
             }
         }
-        if(flag===1){
+        if (flag === 1) {
             localStorage.setItem("book_" + Date.now(), JSON.stringify(book));
             alert('Book Added Successfullyy');
         }
 
     }
-    else if(book.id===""||book.a===""||book.n===""||book.c.length ===0)
-    {
+    else if (book.id === "" || book.a === "" || book.n === "" || book.c.length === 0) {
         alert('Cannot Add Empty Space');
     }
-    else{
+    else {
         localStorage.setItem("book_" + Date.now(), JSON.stringify(book));
         alert('Book Added Successfully');
     }
@@ -57,7 +55,7 @@ function savebook() {
 
 
 // retrieve data in available book admin side
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     let taskList = document.getElementById('_book')
     // console.log(taskList)
     for (let i = 0; i < localStorage.length; i++) {
@@ -102,12 +100,12 @@ document.addEventListener('DOMContentLoaded', function() {
             trr.appendChild(tdd);
 
             tdd = document.createElement("td");
-            let image_tag =document.createElement("img")
+            let image_tag = document.createElement("img")
             prp = data.img;
-            image_tag.src=prp;
+            image_tag.src = prp;
             tdd.appendChild(image_tag);
-            image_tag.style.width="100px";
-            image_tag.style.height="100px";
+            image_tag.style.width = "100px";
+            image_tag.style.height = "100px";
             trr.appendChild(tdd);
 
             taskList.appendChild(trr);
@@ -117,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // for select category options in add new book page  and select to edit page
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     let categories = ["Adventure", "Romance", "Self Help", "Fantasia", "Horror", "Historical Fiction"];
     let element = document.getElementById("bc");
     for (let i = 0; i < categories.length; i++) {
@@ -129,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // for select availability options select to edit page
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     let categories = ["Available", "Borrowed"];
     let element = document.getElementById("bav");
     for (let i = 0; i < categories.length; i++) {
@@ -143,31 +141,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // for select to edit page in admin side
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     let select = document.getElementById('selecting');
     // console.log(taskList)
-    for (let i = 0; i < localStorage.length; i++)
-    {
+    for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
         // console.log(data)
-        if (key.startsWith("book_"))
-        {
+        if (key.startsWith("book_")) {
             const task = localStorage.getItem(key);
-            const data=JSON.parse(task);
+            const data = JSON.parse(task);
             const opt = document.createElement("option");
-            opt.value=data.id;
-            opt.textContent=data.id+'-'+data.n;
+            opt.value = data.id;
+            opt.textContent = data.id + '-' + data.n;
             select.appendChild(opt);
         }
     }
 });
 
-function go_to_edit(){
+function go_to_edit() {
 
     let select = document.getElementById('selecting');
-    let v_select=select.value;
+    let v_select = select.value;
     console.log(v_select)
-    if(v_select!=="") {
+    if (v_select !== "") {
         let hide = document.getElementById("should_hide");
         let show = document.getElementById("should_show");
         hide.style.display = "none";
@@ -179,7 +175,7 @@ function go_to_edit(){
 }
 
 
-function retrieve_to_edit(id_value){
+function retrieve_to_edit(id_value) {
 
     console.log(id_value)
     for (let i = 0; i < localStorage.length; i++) {
@@ -189,47 +185,45 @@ function retrieve_to_edit(id_value){
         if (key.startsWith("book_")) {
             const task = localStorage.getItem(key);
             const data = JSON.parse(task);
-            if(data.id===id_value)
-            {
-                let id =document.getElementById("bid");
-                id.value=data.id;
+            if (data.id === id_value) {
+                let id = document.getElementById("bid");
+                id.value = data.id;
 
-                let n=document.getElementById("bn");
-                n.value=data.n;
+                let n = document.getElementById("bn");
+                n.value = data.n;
 
-                let a=document.getElementById("ba");
-                a.value=data.a;
+                let a = document.getElementById("ba");
+                a.value = data.a;
 
 
-                let c=document.getElementById("bc");
-                c.value=data.c;
+                let c = document.getElementById("bc");
+                c.value = data.c;
 
-                let d=document.getElementById("bd");
-                d.textContent=data.d;
+                let d = document.getElementById("bd");
+                d.textContent = data.d;
 
-                let v=document.getElementById("bav");
-                v.value=data.av;
+                let v = document.getElementById("bav");
+                v.value = data.av;
 
-                let i=document.getElementById("img-view");
-                i.style.backgroundImage=`url(${data.img})`;
+                let i = document.getElementById("img-view");
+                i.style.backgroundImage = `url(${data.img})`;
 
             }
         }
     }
 }
-function save_edit()
-{let book= {
-    id: document.getElementById("bid").value,
-    n:document.getElementById("bn").value,
-    a:document.getElementById("ba").value,
-    c:document.getElementById("bc").value,
-    d:document.getElementById("bd").value,
-    av:document.getElementById("bav").value,
-    img:document.getElementById("input-file").src
-};
+function save_edit() {
+    let book = {
+        id: document.getElementById("bid").value,
+        n: document.getElementById("bn").value,
+        a: document.getElementById("ba").value,
+        c: document.getElementById("bc").value,
+        d: document.getElementById("bd").value,
+        av: document.getElementById("bav").value,
+        img: document.getElementById("input-file").src
+    };
 
-    if(book.id===""||book.a===""||book.n===""||book.c ==="")
-    {
+    if (book.id === "" || book.a === "" || book.n === "" || book.c === "") {
         alert('Cannot Add Empty Space');
 
     }
@@ -251,23 +245,23 @@ function save_edit()
 
 
 
-function upload_image(){
-    const input_file=document.getElementById("input-file");
-    const img_view=document.getElementById("img-view");
+function upload_image() {
+    const input_file = document.getElementById("input-file");
+    const img_view = document.getElementById("img-view");
 
-    let img_link=URL.createObjectURL( input_file.files[0]);
-    img_view.style.backgroundImage=`url(${img_link})`;
-    img_view.textContent=""
-    img_view.style.border ="0";
+    let img_link = URL.createObjectURL(input_file.files[0]);
+    img_view.style.backgroundImage = `url(${img_link})`;
+    img_view.textContent = ""
+    img_view.style.border = "0";
 
 }
-addEventListener('DOMContentLoaded', function() {
-    const file=document.getElementById("input-file");
-    file.addEventListener('change',()=>{
+addEventListener('DOMContentLoaded', function () {
+    const file = document.getElementById("input-file");
+    file.addEventListener('change', () => {
         const fr = new FileReader();
         fr.readAsDataURL(file.files[0]);
-        fr.addEventListener('load',()=>{
-            const url=fr.result;
+        fr.addEventListener('load', () => {
+            const url = fr.result;
             file.src = url;
         })
     })
