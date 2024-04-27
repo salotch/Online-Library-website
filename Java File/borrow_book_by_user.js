@@ -4,7 +4,7 @@ window.addEventListener('load', function () {
     var tableBody = document.getElementById('borrowedBooksTable');
 
     borrowedBooks.forEach(function (book, index) {
-        var row = tableBody.insertRow();
+        var row = tableBody.insertRow(index);
         var numberCell = row.insertCell(0);
         var nameCell = row.insertCell(1);
 

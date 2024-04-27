@@ -1,36 +1,21 @@
-document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('borrowForm').addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent default form submission
 
-        // Get form data
-        var firstName = document.querySelector('input[name="fn"]').value;
-        var lastName = document.querySelector('input[name="ln"]').value;
-        var email = document.querySelector('input[name="ea"]').value;
-        var phone = document.querySelector('input[name="pn"]').value;
-        var address = document.querySelector('input[name="ad"]').value;
-        var bookName = document.querySelector('input[name="bn"]').value;
+function borrowbook() {
+    var bookId = document.getElementById('bid').value;
 
-        // Create an object to represent the borrowed book
-        var borrowedBook = {
-            firstName: firstName,
-            lastName: lastName,
-            email: email,
-            phone: phone,
-            address: address,
-            bookName: bookName,
-            bookID: bookId
-        };
+    updateBookAvailability(bookId);
 
-        // Store the borrowed book in local storage
-        var borrowedBooks = JSON.parse(localStorage.getItem('borrowedBooks')) || [];
-        borrowedBooks.push(borrowedBook);
-        localStorage.setItem('borrowedBooks', JSON.stringify(borrowedBooks));
+    alert("Book borrowed successfully!");
 
-        // Clear form fields
-        document.getElementById('borrowForm').reset();
+}
+function updateBookAvailability() {
+    let books = JSON.parse(localStorage.getItem('books')) || [];
 
-        // Show alert for successful borrowing
-        alert('Book borrowed successfully!');
-
-    });
-});
+    let index = books.findindex(book => book.id == bookId);
+    if (index !== -1) {
+        books[index].availability = "Borrowed";
+        localStorage.setItem('books', JSON.stringify(books));
+        console.log("Book with ID " + bookId + " has been borrowed.");
+    } else {
+        console.log("Book with ID " + bookId + " not found.");
+    }
+}
