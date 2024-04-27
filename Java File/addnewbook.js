@@ -180,11 +180,10 @@ function retrieve_to_edit(id_value) {
     console.log(id_value)
     for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
-        // console.log(data)
-
         if (key.startsWith("book_")) {
             const task = localStorage.getItem(key);
             const data = JSON.parse(task);
+
             if (data.id === id_value) {
                 let id = document.getElementById("bid");
                 id.value = data.id;
