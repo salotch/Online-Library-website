@@ -17,11 +17,17 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
         const selectElement = document.querySelector('#delete');
         const bookToDelete = selectElement.value;
-
-        localStorage.removeItem('book_' + bookToDelete)
-        selectElement.remove(selectElement.selectIndex);
-        alert(`Book "${bookToDelete}" will be deleted.`);
-
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (key.startsWith("book_")) {
+                const task = localStorage.getItem(key);
+                const data = JSON.parse(task);
+                if(data.id===bookToDelete)
+                { localStorage.removeItem(key);
+                    alert(`Book with ID: "${bookToDelete}"is deleted.`);
+                }
+            }
+        }
 
     });
 });
