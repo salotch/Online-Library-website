@@ -18,11 +18,11 @@ document.addEventListener('DOMContentLoaded', function(){
             }
         }
         filteredBooks.forEach(book => {
-            const listItem = document.createElement('li');  
+            const listItem = document.createElement('li');
             listItem.textContent = book.n;
             listItem.addEventListener("click" , function()
             {
-                localStorage.setItem("book-clicked", JSON.stringify(book.id));
+                localStorage.setItem("clicked", JSON.stringify(book.id));
                 window.open(`bookpage.html`);
             }
         );
