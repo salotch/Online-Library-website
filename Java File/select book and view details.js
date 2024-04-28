@@ -25,13 +25,13 @@ document.addEventListener('DOMContentLoaded', function() {
             main.appendChild(bn);
             main.appendChild(bt);
 
-            taskList.appendChild(main);
+            taskList.appendChild(main);   
 
         }
     }
 });
 
-// any button clicked the details appears by calling retrieve function
+// any button clicked the details appears 
 document.addEventListener('DOMContentLoaded', function() {
     let detailButtons = document.querySelectorAll("button");
 
