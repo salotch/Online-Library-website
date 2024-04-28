@@ -37,13 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     detailButtons.forEach((button)=> {
         button.addEventListener("click", function() {
-            // console.log(" it worked")
-            let hide = document.getElementById("books-container");
-            let show = document.getElementById("book-details");
-            hide.style.display = "none";
-            show.style.display = "block"
-            retrieve_to_edit(button.id)
-            // this function is from add new book.js
+            localStorage.setItem("book_clicked" , JSON.stringify(button.id));
+            window.open(`bookpage.html`);
         });
 
     });
