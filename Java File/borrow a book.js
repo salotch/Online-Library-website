@@ -1,21 +1,39 @@
 
-function borrowbook() {
-    var bookId = document.getElementById('bid').value;
+document.addEventListener("DOMContentLoaded", function () {
 
-    updateBookAvailability(bookId);
+    var borrowButton = document.querySelector(".borrow-button");
 
-    alert("Book borrowed successfully!");
+    borrowButton.addEventListener("click", function (event) {
+        event.preventDefault();
 
-}
-function updateBookAvailability() {
-    let books = JSON.parse(localStorage.getItem('books')) || [];
 
-    let index = books.findindex(book => book.id == bookId);
-    if (index !== -1) {
-        books[index].availability = "Borrowed";
-        localStorage.setItem('books', JSON.stringify(books));
-        console.log("Book with ID " + bookId + " has been borrowed.");
-    } else {
-        console.log("Book with ID " + bookId + " not found.");
-    }
-}
+        var bookID = document.getElementById("bid").value;
+        var bookName = document.getElementById("bn").value;
+        var bookAuthor = document.getElementById("ba").value;
+
+        // Update the availability of the book to "borrowed"
+        var bookAvailability = document.getElementById("bav");
+        bookAvailability.value = "Borrowed";
+
+
+        var borrowedBook = {
+            id: bookID,
+            name: bookName,
+            author: bookAuthor
+        };
+
+        // Check if localStorage already contains borrowed books
+        var borrowedBooks = localStorage.getItem("borrowedBooks");
+        if (!borrowedBooks) {
+
+            borrowedBooks = [];
+        } else {
+
+            borrowedBooks = JSON.parse(borrowedBooks);
+        }
+        borrowedBooks.push(borrowedBook);
+        localStorage.setItem("borrowedBooks", JSON.stringify(borrowedBooks));
+        alert("Book borrowed successfully!");
+    });
+});
+
