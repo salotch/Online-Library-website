@@ -162,7 +162,7 @@ function go_to_edit() {
 
     let select = document.getElementById('selecting');
     let v_select = select.value;
-    console.log(v_select)
+    // console.log(v_select)
     if (v_select !== "") {
         let hide = document.getElementById("should_hide");
         let show = document.getElementById("should_show");
@@ -171,7 +171,7 @@ function go_to_edit() {
         retrieve_to_edit(v_select);
     }
     else
-        alert('Cannot Add Empty Space');
+        alert('Cannot Edit Empty Space');
 }
 
 

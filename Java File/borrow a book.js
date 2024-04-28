@@ -1,8 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    var borrowButton = document.querySelector(".borrow-button");
-
+    var borrowButton = document.querySelector("#borrowButton");
     borrowButton.addEventListener("click", function (event) {
         event.preventDefault();
 
