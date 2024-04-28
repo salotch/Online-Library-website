@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     detailButtons.forEach((button)=> {
         button.addEventListener("click", function() {
-            localStorage.setItem("book_clicked" , JSON.stringify(button.id));
+            localStorage.setItem("book-clicked" , JSON.stringify(button.id));
             window.open(`bookpage.html`);
         });
 

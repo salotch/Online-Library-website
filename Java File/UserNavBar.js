@@ -13,13 +13,19 @@ document.addEventListener('DOMContentLoaded', function(){
                 const task = localStorage.getItem(key);
                 const book = JSON.parse(task);
                 if (bookMatchSearch(book, searchTerm)) {
-                    filteredBooks.push(book.n);
+                    filteredBooks.push(book);
                 }
             }
         }
         filteredBooks.forEach(book => {
-            const listItem = document.createElement('li');
-            listItem.textContent = book;
+            const listItem = document.createElement('li');  
+            listItem.textContent = book.n;
+            listItem.addEventListener("click" , function()
+            {
+                localStorage.setItem("book-clicked", JSON.stringify(book.id));
+                window.open(`bookpage.html`);
+            }
+        );
             searchList.appendChild(listItem);
         });
         
@@ -44,3 +50,4 @@ document.addEventListener('DOMContentLoaded', function(){
         );
     }
 });
+// localStorage.clear;

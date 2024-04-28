@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const key = localStorage.key(i);
         const task = localStorage.getItem(key);
         const data = JSON.parse(task);
-        if (key==="book_clicked"){
+        if (key==="book-clicked"){
             retrieve_to_edit(data);
         }
 // console.log(value);
