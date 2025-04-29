@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/selectUserbook.css" />
+    <link rel="stylesheet" href="../CSS/UserNavBar.css" />
+    <title>Book Selection</title>
+    <script src="../JS/select book and view details.js"></script>
+    <script src="../JS/UserNavBar.js"></script>
+    <script src="../JS/addnewbook.js"></script>
+    <script src="../JS/borrow a book.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#" class="logo">Book Store</a>
+
+      <nav class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="User viewlist.html">Available books</a>
+        <a href="borrow_book_by_user.html">Borrowed Books</a>
+        <a href="selec%20a%20book%20user.html">Browse Books</a>
+      </nav>
+
+      <div class="search-container">
+        <input
+          type="text"
+          placeholder="Search for a book.."
+          class="search-bar"
+          id="searchInput"
+        />
+        <button type="submit" class="search-button">
+          <i class="fa fa-search"></i>
+        </button>
+        <ul class="search-list" id="searchList"></ul>
+      </div>
+    </header>
+
+    <div class="books-container" id="books-container"></div>
+  </body>
+</html>

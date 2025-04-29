@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>List of borrow book</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../CSS/UserNavBar.css" />
+    <link rel="stylesheet" href="../CSS/borrow book by user.css" />
+    <script src="../JS/borrow_book_by_user.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#" class="logo">Book Store</a>
+
+      <nav class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="User viewlist.html">Available books</a>
+        <a href="borrow_book_by_user.html">Borrowed Books</a>
+        <a href="selec%20a%20book%20user.html">Browse Books</a>
+      </nav>
+
+      <div class="search-container">
+        <input
+          type="text"
+          placeholder="Search for a book.."
+          class="search-bar"
+          id="searchInput"
+        />
+        <button type="submit" class="search-button">
+          <i class="fa fa-search"></i>
+        </button>
+        <ul class="search-list" id="searchList"></ul>
+      </div>
+    </header>
+    <br />
+    <div>
+      <caption>
+        <b>Name of books that borrowed by this user</b>
+      </caption>
+      <br />
+      <table id="Books">
+        <thead>
+          <tr>
+            <th>number</th>
+            <th>Book's name</th>
+          </tr>
+        </thead>
+        <tbody id="borrowedBooksTable"></tbody>
+        <tfoot>
+          <tr></tr>
+        </tfoot>
+      </table>
+    </div>
+  </body>
+</html>
